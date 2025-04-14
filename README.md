@@ -15,6 +15,8 @@ npx tailwindcss init
 data in supabase
 ![alt text](image-2.png)
 
+![alt text](image-3.png)
+
 
 NEXT_PUBLIC_SUPABASE_URL=https://gtucpruooeruehbmperb.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=e1yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0dWNwcnVvb2VydWVoYm1wZXJiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU1NTc1NTUsImV4cCI6MjA1MTEzMzU1NX0.CUd4Vp5_xNReno7Qgjo7HMHcCBMT98RGedbxef4KfQk
