@@ -6,9 +6,14 @@ interface AuthState {
   session: any;
   signIn: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
-  checkAuth: () => Promise<void>;
+  checkAuth: any;
   signUp: (email: string, password: string) => Promise<void>;
 }
+
+type userType = {
+  email: string;
+  password: string;
+};
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
@@ -29,17 +34,14 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ user: null, session: null });
   },
 
-  signUp: async () => {
-    // const { error } = await supabase.auth.signUp({
-    //   email: "changyong5899@gmail.com",
-    //   password: "boxUser",
-    // });
+  signUp: async (data: any) => {
+    const { error } = await supabase.auth.signUp(data);
 
-    // if (error) {
-    //   alert("注册错误:" + error?.message);
-    // } else {
-    //   alert("注册成功，请检查邮箱验证");
-    // }
+    if (error) {
+      alert("注册错误:" + error?.message);
+    } else {
+      alert("注册成功，请检查邮箱验证");
+    }
   },
 
   checkAuth: async () => {

@@ -42,7 +42,9 @@ function RootLayout({ children }: any) {
 
   useEffect(() => {
     checkAuth();
-    signUp();
+    const email = "changyong5899@gmail.com";
+    const password = "boxUser";
+    signUp(email, password);
   }, [checkAuth]);
 
   return (
